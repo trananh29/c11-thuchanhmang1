@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thaotacvsmang</title>
+</head>
+<body>
+<input id="text1" size="35" >
+<button type="button" id="but1" >Add</button>
+<button type="button" id="but2" >Display</button>
+<p id="result" ></p>
+<script>
+  let button1=document.getElementById('but1')
+  button1.addEventListener('click',add);
+  let button2=document.getElementById('but2')
+  button2.addEventListener('click',display);
+let x=0;
+let arr = [];
+function add() {
+  arr[x]=document.getElementById('text1').value;
+  x++;
+}
+function display() {
+  let e = '';
+  for (let i=0; i< arr.length;i++) {
+    e += 'Element  ' + i + ' = ' + arr[i] + '<br>';
+    document.getElementById('result').innerHTML=e;
+  }
+}
+</script>
+</body>
+</html>
